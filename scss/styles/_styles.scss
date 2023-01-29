@@ -1,0 +1,85 @@
+/* variables */
+$font-color: #d2d2d2;
+$div-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.56);
+
+/* styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 2rem;
+  background-color: rgb(65, 65, 65);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  padding: 2rem;
+  box-shadow: $div-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1,
+p {
+  color: $font-color;
+}
+
+.content {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.div-1,
+.div-2,
+.div-3,
+.div-4 {
+  @include div-styles();
+
+  &:hover {
+    cursor: pointer;
+    transform: translate3d(2px, 2px, 0);
+    transition: all 200ms ease;
+  }
+}
+
+.div-1 {
+  background-color: #f59ca9;
+
+  &:hover {
+    background-color: #f6828c;
+  }
+}
+
+.div-2 {
+  background-color: #f6828c;
+
+  &:hover {
+    background-color: #df57bc;
+  }
+}
+
+.div-3 {
+  background-color: #df57bc;
+
+  &:hover {
+    background-color: #a03e99;
+  }
+}
+
+.div-4 {
+  background-color: #a03e99;
+
+  &:hover {
+    background-color: #f6828c;
+  }
+}
